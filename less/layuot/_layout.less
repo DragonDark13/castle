@@ -1,0 +1,83 @@
+
+
+.container{
+	background: #CCC;
+	width: 100%;
+	height: 100vh;
+	min-height: 617px;
+	.cross_gradient(0deg,@darkPrimaryColor, @lightPrimaryColor );
+	.base_effect_block;
+	perspective: 800px;
+	perspective-origin: top;
+
+	&>*,
+	.gate{
+	.margin_auto;
+	}
+}
+
+@towers_h: 48%;
+@top-wall_h: 5%;
+@wall_h: 24%;
+@foundation_h : 100% - ( @towers_h +  @wall_h + @top-wall_h);
+
+.ground{
+	@height: 30%;
+	position: absolute;
+	width: 100%;
+	height: @height;
+	.pos_absolute_horizontal;
+	bottom: -(@height / 2);
+	background-color:  darken(@darkPrimaryColor, 5%);
+	.borderRadius(50%);
+}
+
+	.top-wall,
+	.towers-container{
+		width: 37%;
+	}
+
+	.towers-container{
+		.clearfix;
+		height: @towers_h;
+	}
+
+	.wall{
+		width: 24%;
+		height: @wall_h;
+	}
+
+	.top-wall{
+		height: @top-wall_h;
+	}
+
+	.foundation{
+		width: 28%;
+		height: @foundation_h;
+		.my_trasform(rotateX(26deg));
+	}
+
+	.foundation,
+	.wall,
+	.top-wall{
+		background-color: @castle_color;
+		.theme_box_shadow;
+	}
+
+	.wall{
+		position: relative;
+	}
+
+	.gate{
+		position: absolute;
+		bottom: 0px;
+		.pos_absolute_horizontal;
+		height: 71%;
+		width: 29%;
+		.borderRadius(50% 50% 0 0);
+		background-color: darkgoldenrod;
+		.theme_box_shadow;
+	}
+
+
+
