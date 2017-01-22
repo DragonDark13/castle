@@ -79,7 +79,7 @@ box-sizing: @box-model;
 
 
 
-@default_font_fam: ArialMT;
+@default_font_fam: Lato;
 
 
 .media_min(@size,@rules) {
@@ -157,3 +157,19 @@ background: linear-gradient(@deg , @1color,@2color) ;
     overflow: hidden;
 }
 
+
+.step_transparent(@height: 30%, @step: 2%){
+@percent: 100% / @height;
+.my_trasform(translateY(@percent*@step));
+}
+
+.hide_block(){
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: fade( @color_black , 60% );
+}
