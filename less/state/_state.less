@@ -1,6 +1,6 @@
 
 
-.button{
+.build_plan{
 	.transition(0.5s);
 
 	&:hover{
@@ -46,12 +46,13 @@
 
 
 .show{
+	position: fixed;
 
 	&:after{
 		.opacity(0);
 	}
 
-	.button{
+	.build_plan{
 		.my_trasform(translateY(-200%));
 		.opacity(0);
 		pointer-events: none;
@@ -76,6 +77,11 @@
 		.towers-container{
 			.my_trasform(translateY(0%));
 		}
+	}
+
+	.no_scroll{
+		height: 100%;
+		overflow: hidden;
 	}
 
 
